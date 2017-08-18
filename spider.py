@@ -16,8 +16,8 @@ def get_page_index(offset,keyword):
 	}
 
 	url = 'https://www.toutiao.com/search_content/?' + urlencode(data)#from urllib.parse import urlencode
-	response = requests.get(url)
 	try:#避免网址输入错误而影响程序中断
+		response = requests.get(url)
 		if response.status_code == 200:
 			return response.text
 		return None
